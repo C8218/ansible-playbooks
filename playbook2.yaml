@@ -1,0 +1,15 @@
+---
+- name: copy for linux
+  hosts: webservers
+  tasks:
+    - name: copy your file to the webservers
+      copy:
+        src: /home/ec2-user/testfile1
+        dest: /home/ec2-user/kızılcaağaç
+- name: copy for ubuntu
+  hosts: ubuntuservers
+  tasks:
+    - name: copy your file to the node3
+      copy:
+        src: /home/ec2-user/testfile1
+        dest: /home/ubuntu/kızılcaağaç
